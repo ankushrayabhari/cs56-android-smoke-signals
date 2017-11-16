@@ -19,8 +19,6 @@ import java.util.List;
  * Created by bioburn on 2016/03/09.
  */
 public class WhiteList extends Activity {
-    //this is one way you can save and open a text file
-    private final static String storeText ="storeText.txt";
     private EditText appendText;
     private TextView phoneNumbers;
     private DaoManager daoManager;
