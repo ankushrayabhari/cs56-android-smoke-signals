@@ -39,6 +39,13 @@ public class PhoneNumber {
         this.id = id;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if(o instanceof PhoneNumber) {
+            return ((PhoneNumber) o).getNumber().equals(this.getNumber());
+        }
+        return false;
+    }
 
     @Override
     public String toString() {
