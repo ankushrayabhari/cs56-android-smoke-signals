@@ -1,6 +1,11 @@
 package com.konukoii.smokesignals.api;
 
+import android.content.Context;
+
+import com.konukoii.smokesignals.R;
+
 import java.util.HashMap;
+
 
 /**
  * Created by ankushrayabhari on 11/4/17.
@@ -9,22 +14,9 @@ import java.util.HashMap;
 public class CommandManager {
     private HashMap<String, Command> commandMap;
 
-    public final static String[] commands = {
-            "Battery",
-            "Bluetooth",
-            "Calls",
-            "Contact",
-            "Help",
-            "Joke",
-            "Location",
-            "Powersave",
-            "Ring",
-            "SMS",
-            "Whitelist",
-            "Wifi"
-    };
+    private static HashMap<String, Command> getCommands(Context context) {
+        final String[] commands = context.getResources().getStringArray(R.array.commands_list);
 
-    private static HashMap<String, Command> getCommands() {
         HashMap<String, Command> map = new HashMap<String, Command>();
         for(String command : commands) {
             Class<?> commandClass;
@@ -47,8 +39,8 @@ public class CommandManager {
         return map;
     }
 
-    public CommandManager() {
-        commandMap = getCommands();
+    public CommandManager(Context context) {
+        commandMap = getCommands(context);
     }
 
     public Command getCommand(String command) {

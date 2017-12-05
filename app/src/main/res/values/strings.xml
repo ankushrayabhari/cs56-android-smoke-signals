@@ -3,7 +3,36 @@
 
     <string name="app_name">SmokeSignals</string>
     <string name="action_settings">Settings</string>
-    <string name="help_text">TEXT</string>
+    <string name="help_text">
+Text one of the following commands:
+//Location : and the phone will text you back with it\'s gps coordinates.
+//Contact [name] : and the phone will text you back with the stored contact info of anyone who fully or partially matches [name].
+//Battery : and the phone will text you back with its battery percentage and charging status.
+//Calls : and the phone will text you back the last phone calls it has gotten.
+//Ring : (WIP) and the phone will start ringing.
+//Help : Return the list of all possible
+//SMS [number] m:[message]" : Send an sms to [number] saying [message].
+//Joke" : Send a random joke from an array of jokes from the phone's data base.
+//Wifi [arguemnt] : and the phone will turn the wifi "on", "off", or will return the status if there is no argument.
+//Bluetooth [argument]: and the phone will turn the bluetooth "on", "off", or will return the status if there is no argument.
+//Status [argument]: get the status of the "wifi", "bluetooth", or "all" using these arguments.
+//Powersave [function name]: to turn off function.
+    </string>
+    <string-array name="commands_list">
+        <item></item>
+        <item>Battery</item>
+        <item>Bluetooth</item>
+        <item>Calls</item>
+        <item>Contact</item>
+        <item>Help</item>
+        <item>Joke</item>
+        <item>Location</item>
+        <item>Powersave</item>
+        <item>Ring</item>
+        <item>SMS</item>
+        <item>Whitelist</item>
+        <item>Wifi</item>
+    </string-array>
     <string name="ringstop_header">SmokeSignals Currently Ringing!</string>
     <string name="ringstop_button">Stop Ringing!</string>
 </resources>

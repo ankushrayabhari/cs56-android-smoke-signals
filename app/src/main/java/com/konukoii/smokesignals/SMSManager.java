@@ -25,10 +25,12 @@ public class SMSManager extends BroadcastReceiver {
 
     public SMSManager() {
         smsManager = SmsManager.getDefault();
-        commandManager = new CommandManager();
     }
 
     private void messageReceived(Context context, String phoneNumber, String body) {
+        if (commandManager == null) {
+            commandManager = new CommandManager(context);
+        }
         if(!body.startsWith("//")) return;
 
         body = body.substring(2);
